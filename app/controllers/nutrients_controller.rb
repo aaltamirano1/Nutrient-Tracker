@@ -22,7 +22,7 @@ class NutrientsController < ApplicationController
 
     @ratings.each do |rating|
         if rating.nutrient_id === @nutrient.id
-          @dates.push(rating.date)
+          @dates.push(Time.parse(rating.date))
         end
     end
   end

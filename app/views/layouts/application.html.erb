@@ -12,7 +12,7 @@
   	<nav class="navbar-fixed-top navbar-default">
 	    <div class="container">
 	    	<% if user_signed_in? %>
-		      <%= link_to "Home", root_path, class: "btn button-primary" %>
+		      <%= link_to "Home", root_path, id: "Home-btn", class: "btn button-primary" %>
 		      <%= link_to 'New Daily Rating', new_rating_path, class: "btn btn-default" %>
 
 					<div class="dropdown pull-right">
@@ -36,6 +36,5 @@
     <main class="container">
     	<%= yield %>
     </main>
-    
   </body>
 </html>
