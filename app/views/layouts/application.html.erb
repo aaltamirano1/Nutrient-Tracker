@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nutrient Tracker</title>
+    <%= csrf_meta_tags %>
+    <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Approve.svg/256px-Approve.svg.png" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<nav class="navbar-fixed-top navbar-default">
+	    <div class="container">
+	    	<% if user_signed_in? %>
+		      <%= link_to "Home", root_path, class: "btn button-primary" %>
+		      <%= link_to 'New Daily Rating', new_rating_path, class: "btn btn-default" %>
+
+					<div class="dropdown pull-right">
+					  <button class="btn button-primary dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					    <%= current_user.email %>
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+	            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+	            <li><%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %></li>
+	            <li><%= link_to "My Journal", journal_bydate_path %></li>
+					  </ul>
+					</div>
+
+	      <% else %>
+	      	<%= link_to "Log in", new_session_path(resource_name), class: 'btn button-primary' %>
+				  <%= link_to "Sign up", new_registration_path(resource_name), class: 'btn button-primary' %>
+	      <% end %>
+	    </div>
+    </nav>
+    <main class="container">
+    	<%= yield %>
+    </main>
+    
+  </body>
+</html>
