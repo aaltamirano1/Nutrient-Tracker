@@ -23,7 +23,7 @@
           <tr>
             <td><span class="badge" style="font-size: 1.1em;margin:10% 0 0 10px;"><%= rating.rating %></span></td>
             <td>
-            	<p style="font-size: .9em;"><em><%= rating.date.strftime( "%b %e, %Y") %></em></p>
+            	<p style="font-size: .9em;"><em><%= Time.parse(rating.date).strftime( "%b %e, %Y") %></em></p>
             	<p><%= rating.notes %></p>
             </td>
           </tr>
