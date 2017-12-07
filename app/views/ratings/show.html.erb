@@ -5,7 +5,7 @@
 	</div>
 	<h2><%= @nutrients.find_by_id(@rating.nutrient_id).name %></h2>
 
-	<p><em><%= @rating.date.strftime("%B %e %Y") %></em></p>
+	<p><em><%= Time.parse(@rating.date).strftime("%B %e %Y") %></em></p>
 		<hr>
 	<p><strong>Notes:</strong></p>
 			<td><div class="well"><%= @rating.notes %></div></td>
