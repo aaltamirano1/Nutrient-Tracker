@@ -91,6 +91,7 @@ main{
 
 
 @media screen and (max-width: 770px){
+	nav.container{width: 94%;}
 	main.container{max-width: 650px;width: 94%;margin-top: 70px; padding: 10px}
 	h1{font-size: 30px;}
 	#nutrient-index-heading{display: flex;flex-direction: column-reverse; align-items: center;}
