@@ -104,6 +104,8 @@ main{
 	.simple-calendar{font-size: 10px;}
 	.simple-calendar .day{height: 40px;}
 	.rating{height: 25px;}
-
    
+}
+@media screen and (max-width: 770px){
+	nav .container{padding: 0;}
 }
