@@ -1,10 +1,10 @@
-<div style="margin: 20px">
-<%= link_to new_nutrient_path do %>
-    <button class="btn button-primary pull-right" style="margin: 10px 20px 0 0;">+ Track New Nutrient</button>
-<% end %>
+<div id="nutrient-index-heading">
+  <%= link_to new_nutrient_path do %>
+      <button id="new-nutrient" class="btn button-primary pull-right">+ Track New Nutrient</button>
+  <% end %>
 
-<h1 style="margin: 30px 0">Nutrient Tracker</h1>
-
+  <h1>Nutrient Tracker</h1>
+</div>
 <% @nutrients.each do |nutrient| %>
   <%if nutrient.user_id === current_user.id %>
     <div class="well">
@@ -20,5 +20,5 @@
     </div>
   <% end %>
 <% end %>
-</div>  
+
 

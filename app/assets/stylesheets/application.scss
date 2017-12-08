@@ -28,7 +28,7 @@ body{
 	color: #CF000F;
 	background-color: #EC644B;
 }
-h1{font-size: 45px;}
+h1{font-size: 45px;margin: 20px 0 30px 0;}
 nav{
 	display: flex;
 	height: 45px;
@@ -43,14 +43,7 @@ a:hover{
 }
 .container{
 	max-width: 700px;
-}
-main{
-	background-color: #F2F1EF;
-	border-radius: 3px;
-	margin: auto;
-	margin-top: 70px;
-	margin-bottom: 20px;
-	padding: 0 15px;
+	padding: 30px;
 }
 .btn{
 	border-radius: 17px;
@@ -76,8 +69,36 @@ main{
 .form-control{
 	max-width: 	600px;
 }
-@media screen and (max-width: 800px){
-	.container{
-		width: 90%;
-	}
+/***********************************************************************homepage****/
+main{
+	background-color: #F2F1EF;
+	border-radius: 3px;
+	margin: auto;
+	margin-top: 70px;
+	margin-bottom: 20px;
+	padding: 0 15px;
+}
+#new-nutrient{
+	margin: 5px 20px 0 0;
+}
+
+
+/************************************************************************login***/
+#login-welcome{
+	margin: 30px 0;
+}
+
+
+
+@media screen and (max-width: 770px){
+	main.container{max-width: 650px;width: 94%;margin-top: 70px; padding: 10px}
+	h1{font-size: 30px;}
+	#nutrient-index-heading{display: flex;flex-direction: column-reverse; align-items: center;}
+	div#nutrient-index-heading h1{margin-bottom: 0}
+	button#new-nutrient{float: none !important;margin: 20px 0;}
+	.well{padding:10px 20px;margin-bottom: 15px;}
+	.well h2{margin-top: 10px;}
+	#login-welcome{font-size:45px;margin-bottom: 10px}
+
+   
 }
