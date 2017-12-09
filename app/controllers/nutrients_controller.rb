@@ -17,13 +17,11 @@ class NutrientsController < ApplicationController
   # GET /nutrients/1
   # GET /nutrients/1.json
   def show
-    @ratings = Rating.all
+    @ratings = Rating.where("nutrient_id=?", @nutrient.id)
     @dates = []
 
     @ratings.each do |rating|
-        if rating.nutrient_id === @nutrient.id
-          @dates.push(Time.parse(rating.date))
-        end
+          @dates.push(rating.date)
     end
   end
 
