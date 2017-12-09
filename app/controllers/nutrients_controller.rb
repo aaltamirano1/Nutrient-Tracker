@@ -22,10 +22,7 @@ class NutrientsController < ApplicationController
     @dates = []
 
     @ratings.each do |rating|
-      puts '======================'
-      puts rating
-      puts '======================'
-      @dates.push(rating.date)
+      @dates.push(Time.parse(rating.date))
     end
   end
 
