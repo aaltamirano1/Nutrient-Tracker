@@ -9,6 +9,9 @@
 </header>
 <%= month_calendar do |calendar_date| %>
 	<%if @dates.include?(calendar_date) %>
+    <%    puts '======================'
+    puts @ratings.find_by_date(calendar_date)
+    puts '======================' %>
     <%= link_to rating_path(@ratings.find_by_date(calendar_date)) do %>
       <% case @ratings.find_by_date(calendar_date).rating %>
         <% when 1 %>

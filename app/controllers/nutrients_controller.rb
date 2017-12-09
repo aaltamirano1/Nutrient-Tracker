@@ -18,10 +18,14 @@ class NutrientsController < ApplicationController
   # GET /nutrients/1.json
   def show
     @ratings = Rating.where("nutrient_id=?", @nutrient.id)
+
     @dates = []
 
     @ratings.each do |rating|
-          @dates.push(rating.date)
+      puts '======================'
+      puts rating
+      puts '======================'
+      @dates.push(rating.date)
     end
   end
 
