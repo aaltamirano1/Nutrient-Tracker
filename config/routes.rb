@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tutorial/index' => 'tutorial'
+
   resources :ratings
 	root "nutrients#index"
   resources :nutrients
