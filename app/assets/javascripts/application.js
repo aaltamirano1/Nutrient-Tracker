@@ -13,53 +13,51 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require_tree .
-$( document ).on('turbolinks:load', function() {
+$(document).ready(function(){
+  $(  "#tutorial-toggle" ).click(function(e) {
+      e.preventDefault();
+      $( "#tutorial" ).toggle();
+      $( "main" ).toggle();
+  });
+
+
   $('input[type="radio"]').click(function(){
     if ($("#rating1").is(':checked'))
     { 	$("#explain-rating > p").remove();
       $("#explain-rating").append("<p>Did so poorly I felt sick.</p>");
     }
   });
-});
-$( document ).on('turbolinks:load', function() {
+
+
   $('input[type="radio"]').click(function(){
     if ($("#rating2").is(':checked'))
     { 	$("#explain-rating > p").remove();
       $("#explain-rating").append("<p>Did poorly.</p>");
     }
   });
-});
-$( document ).on('turbolinks:load', function() {
+
+
   $('input[type="radio"]').click(function(){
     if ($("#rating3").is(':checked'))
     {   $("#explain-rating > p").remove();
       $("#explain-rating").append("<p>Didn't pay attention to my goal.</p>");
     }
   });
-});
-$( document ).on('turbolinks:load', function() {
+
+
   $('input[type="radio"]').click(function(){
     if ($("#rating4").is(':checked'))
     {	$("#explain-rating > p").remove();
       $("#explain-rating").append("<p>Did pretty well.</p>");
     }
   });
-});
-$( document ).on('turbolinks:load', function() {
+
+
   $('input[type="radio"]').click(function(){
     if ($("#rating5").is(':checked'))
     {	$("#explain-rating > p").remove();
       $("#explain-rating").append("<p>Killed it! Met my goal!</p>");
     }
-  });
-});
-$(document).ready(function(){
-  $(  "#tutorial-toggle" ).click(function(e) {
-      console.log('Clicked!');
-      e.preventDefault();
-      $( "#tutorial" ).toggle();
-      $( "main" ).toggle();
   });
 });
