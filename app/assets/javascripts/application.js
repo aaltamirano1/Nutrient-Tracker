@@ -54,5 +54,11 @@ $( document ).on('turbolinks:load', function() {
       $("#explain-rating").append("<p>Killed it! Met my goal!</p>");
     }
   });
+  $(  "#tutorial-toggle" ).click(function(e) {
+      console.log('Clicked!');
+      e.preventDefault();
+      $( "#tutorial" ).toggle();
+      $( "main" ).toggle();
+  });
 });
 
