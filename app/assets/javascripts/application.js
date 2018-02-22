@@ -16,9 +16,10 @@
 //= require_tree .
 $(document).ready(function(){
   $(  "#tutorial-toggle" ).click(function(e) {
-      e.preventDefault();
-      $( "#tutorial" ).toggle();
-      $( "main" ).toggle();
+    console.log('Clicked');
+    e.preventDefault();
+    $( "#tutorial" ).toggle();
+    $( "main" ).toggle();
   });
 
 

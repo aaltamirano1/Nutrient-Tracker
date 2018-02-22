@@ -6,9 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
-gem 'bootstrap-sass'
-gem 'bootstrap-tour-rails'
 gem 'jquery-rails'
+gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem "simple_calendar", "~> 2.0"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
