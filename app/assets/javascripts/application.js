@@ -16,7 +16,6 @@
 //= require_tree .
 $(document).ready(function(){
   $(  "#tutorial-toggle" ).click(function(e) {
-    console.log('Clicked');
     e.preventDefault();
     $( "#tutorial" ).toggle();
     $( "main" ).toggle();
