@@ -54,6 +54,8 @@ $( document ).on('turbolinks:load', function() {
       $("#explain-rating").append("<p>Killed it! Met my goal!</p>");
     }
   });
+});
+$( document ).on('turbolinks:load', function() {
   $(  "#tutorial-toggle" ).click(function(e) {
       console.log('Clicked!');
       e.preventDefault();
@@ -61,4 +63,3 @@ $( document ).on('turbolinks:load', function() {
       $( "main" ).toggle();
   });
 });
-
